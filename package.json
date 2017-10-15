@@ -1,0 +1,23 @@
+{
+  "name": "TrainingCenter-server",
+  "version": "1.0.0",
+  "description": "Training Center's platform server",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha 'test/unit/*.js'",
+    "test-acceptance": "mocha 'test/acceptance/*.js'",
+    "start": "node ./bin/www",
+    "start-dev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "express": "4.15.5"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "chai-http": "3.0.0",
+    "mocha": "4.0.1",
+    "nodemon": "1.12.1"
+  }
+}
