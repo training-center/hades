@@ -1,5 +1,5 @@
 {
-  "name": "TrainingCenter-server",
+  "name": "training-center-server",
   "version": "1.0.0",
   "description": "Training Center's platform server",
   "main": "app.js",
