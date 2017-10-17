@@ -60,7 +60,8 @@ Os requisitos básicos da plataforma de mentoria, identificados previamente por 
 **Entradas de dados**
 
 * painel administrativo
-* cadastro de mentores(as)
+* cadastro de mentores(as) Obs: O mentor será pré cadastrado, mas precisaram de uma liberação dos outros mentores ou admins para estar disponível como mentor.
+* Os admins serão incluídos diretamente no Banco de Dados e vão fazer tudo que um mentor faz, além de poder retirar pessoas do projeto.
 * cadastro de mentorados(as)
 * cadastro como pessoa que busca mentoria
 * email de pessoas que se logam na plataforma
