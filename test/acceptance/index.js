@@ -11,7 +11,7 @@ describe("Route: Index", () => {
       chai.request(server)
         .get("/")
         .end((err, res) => {
-          const expected = "Plataforma TrainingCenter"
+          const expected = "Plataforma training-center"
           res.should.have.status(200)
           res.should.be.json
           res.body.msg.should.equal(expected)
