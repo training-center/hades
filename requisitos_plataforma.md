@@ -82,7 +82,7 @@ Todos os nomes, emails e perfis (mentor(a)/mentorado(a)) devem ser armazenados e
 Ao se cadastrarem como mentor ou a mentora, as pessoas devem informar os seguintes dados:
 
 * nome
-* especialização (back end, front end, mobile, etc)
+* área (back end, front end, mobile, etc)
 * links para seus perfis sociais (LinkedIn, GitHub, Facebook, Twitter, Site pessoal, YouTube, etc)
 * email para contato (que pode ser diferente do cadastrado na plataforma via login social)
 * relacionamento (link para o perfil de seu/sua mentorado(a))
@@ -131,7 +131,7 @@ Estes dados serão utilizados para que alguém que presta mentoria procure algu�
 Na listagem de mentores(as) devemos ter:
 
 * nome
-* especialização (back end, front end, mobile, etc)
+* área (back end, front end, mobile, etc)
 * links para seus perfis sociais (LinkedIn, GitHub, Facebook, Twitter, Site pessoal, YouTube, etc)
 * email para contato (que pode ser diferente do cadastrado na plataforma via login social)
 * relacionamento (link para o perfil de seu/sua mentorado(a))
