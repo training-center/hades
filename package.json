@@ -12,7 +12,10 @@
   },
   "dependencies": {
     "body-parser": "1.18.2",
-    "express": "4.15.5"
+    "express": "4.15.5",
+    "pg": "^7.3.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.17.0"
   },
   "devDependencies": {
     "chai": "4.1.2",
