@@ -1,0 +1,22 @@
+version: "2"
+services:
+        web:
+                build: .
+                command: ./wait-for
+                volumes:
+                        - .:/app/
+                        - /app/node_modules
+                ports:
+                        - 3000:3000
+                depends_on:
+                        - postgres
+                environment:
+                        DATABASE_URL: postgres://hades@postgres/hadesdb
+                        DB_USERNAME: hades
+                        DB_NAME: hadesdb
+                        DB_HOSTNAME: postgres
+        postgres:
+                image: postgres:latest
+                environment:
+                        POSTGRES_USER: hades
+                        POSTGRES_DB: hadesdb

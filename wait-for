@@ -1,0 +1,12 @@
+#!/bin/sh
+
+until node wait.js; do
+echo "Postgres is unavailable - sleeping"
+  sleep 1
+done
+
+echo "Postgres is up - executing command"
+
+./node_modules/.bin/sequelize db:migrate 
+./node_modules/.bin/sequelize db:seed:all
+npm run start-dev
