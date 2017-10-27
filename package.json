@@ -5,15 +5,15 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "test": "mocha 'test/unit/*.js'",
-    "test-acceptance": "mocha 'test/acceptance/*.js'",
+    "test": "mocha --exit 'test/unit/*.js'",
+    "test-acceptance": "mocha --exit 'test/acceptance/*.js'",
     "start": "node ./bin/www",
     "start-dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "body-parser": "1.18.2",
     "express": "4.15.5",
-    "pg": "^6.4.1",
+    "pg": "^5.0.0",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.30.4",
     "sequelize-cli": "^3.0.0"

@@ -1,0 +1,29 @@
+version: "2"
+services:
+        test:
+                build: .
+                command: ./wait-for test
+                volumes:
+                        - .:/app/
+                        - /app/node_modules
+                ports:
+                        - 3001:3000
+                depends_on:
+                        - postgres-test
+                networks:
+                  - test-net        
+                environment:
+                        DATABASE_URL: postgres://hades@postgres-test/hadesdb
+                        DB_USERNAME: hades
+                        DB_NAME: hadesdb
+                        DB_HOSTNAME: postgres-test
+        postgres-test:
+                image: postgres:latest
+                environment:
+                        POSTGRES_USER: hades
+                        POSTGRES_DB: hadesdb
+                networks:
+                  - test-net  
+networks:
+  test-net:
+    driver: bridge
