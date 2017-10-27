@@ -9,14 +9,18 @@ services:
                 ports:
                         - 3000:3000
                 depends_on:
-                        - postgres
+                        - mysql
                 environment:
-                        DATABASE_URL: postgres://hades@postgres/hadesdb
-                        DB_USERNAME: hades
-                        DB_NAME: hadesdb
-                        DB_HOSTNAME: postgres
-        postgres:
-                image: postgres:latest
+                  DATABASE_URL: mysql://hades:hades@mysql/hadesdb
+                  DB_PASSWORD: hades
+                  DB_USERNAME: hades
+                  DB_PASSWORD: hades
+                  DB_NAME: hadesdb
+                  DB_HOSTNAME: mysql
+        mysql:
+                image: mysql:latest
                 environment:
-                        POSTGRES_USER: hades
-                        POSTGRES_DB: hadesdb
+                        MYSQL_ROOT_PASSWORD: hadespwd
+                        MYSQL_DATABASE: hadesdb
+                        MYSQL_USER: hades
+                        MYSQL_PASSWORD: hades

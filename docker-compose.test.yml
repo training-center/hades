@@ -9,19 +9,22 @@ services:
                 ports:
                         - 3001:3000
                 depends_on:
-                        - postgres-test
+                        - mysql-test
                 networks:
                   - test-net        
                 environment:
-                        DATABASE_URL: postgres://hades@postgres-test/hadesdb
-                        DB_USERNAME: hades
-                        DB_NAME: hadesdb
-                        DB_HOSTNAME: postgres-test
-        postgres-test:
-                image: postgres:latest
+                  DATABASE_URL: mysql://hades:hades@mysql-test/hadesdb
+                  DB_USERNAME: hades
+                  DB_PASSWORD: hades
+                  DB_NAME: hadesdb
+                  DB_HOSTNAME: mysql-test
+        mysql-test:
+                image: mysql:latest
                 environment:
-                        POSTGRES_USER: hades
-                        POSTGRES_DB: hadesdb
+                        MYSQL_ROOT_PASSWORD: hadespwd
+                        MYSQL_DATABASE: hadesdb
+                        MYSQL_USER: hades
+                        MYSQL_PASSWORD: hades
                 networks:
                   - test-net  
 networks:
