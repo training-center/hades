@@ -13,9 +13,10 @@
   "dependencies": {
     "body-parser": "1.18.2",
     "express": "4.15.5",
+    "express-validator": "4.2.1",
     "mysql": "^2.15.0",
-    "sequelize": "^3.30.4",
-    "sequelize-cli": "^3.0.0"
+    "sequelize": "3.30.4",
+    "sequelize-cli": "3.0.0"
   },
   "devDependencies": {
     "chai": "4.1.2",
