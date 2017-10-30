@@ -18,6 +18,14 @@ Após a execução do comando o API deve estár disponível em:
 
 Qualquer modificação em nos arquivos `.js` do projeto deverão recaregar o node automáticamente, pois este esta sendo executado através de um `nodemon`, assim é só codar que seu servidor irá atualizar automáticamente.
 
+#### Outras plataformas
+
+Em caso de erros na composição do *Docker*, tais como: 
+
+```ERROR: no supported platform found in manifest list```
+
+Consulte outras plataformas: [i686](i686.md).
+
 ### Rodando os testes com Docker
 
 Ha um `docker-compose` para rodar os testes da aplicação, nele irá criar um container com um banco novo para testes. Esse compose ira executar as migrations e seed no banco para testes, sequido dos testes unitários e aceitação e depois ira automáticamente desligar os containers para testes.
