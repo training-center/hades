@@ -1,5 +1,7 @@
 #!/bin/sh
 
+npm install
+
 until node wait.js; do
 echo "Mysql is unavailable - sleeping"
   sleep 1
