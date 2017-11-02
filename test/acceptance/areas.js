@@ -28,8 +28,7 @@ describe("Route: Areas", () => {
         .end((err, res) => {
           res.should.have.status(200)
           res.should.be.json
-          res.body.should.have.keys('areas');
-          res.body.areas.should.be.an('array').that.deep.include({id: 1, name: 'Back-End'});
+          res.body.should.include({id: 1, name: 'Back-End'});
           done()
         })
     })

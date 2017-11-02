@@ -3,16 +3,10 @@ var controller = require('../controllers/areas');
 var areaMiddleware = require('../middleware/areas');
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
-  controller.get(req, res);
-});
+router.get('/', controller.get);
 
-router.post('/', areaMiddleware, function(req, res, next) {
-  controller.post(req, res);
-});
+router.post('/', areaMiddleware, controller.post);
 
-router.put('/:id', areaMiddleware, function(req, res, next) {
-  controller.put(req, res);
-});
+router.put('/:id', areaMiddleware, controller.put);
 
 module.exports = router;

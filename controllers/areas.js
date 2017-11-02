@@ -11,21 +11,20 @@ module.exports = {
   post: (req, res) =>
   {
     areaDAO.adiciona(req.body.name)
-      .then(() => areaDAO.lista())
-      .then((areas) => res.send(areas))
+      .then((adicionado) => res.send({id:  adicionado.id, name: adicionado.name}))
   },
 
   put: (req, res) =>
   {
     areaDAO.atualiza(req.params.id, req.body.name)
-      .then(([rows]) => {
+      .then((rows) => {
         if (rows > 0)
         {
           return areaDAO.lista();
         } 
         else
         {
-          res.status(403).send({msg: "Resource not found"});
+          res.status(404).send({msg: "Resource not found"});
         }
       })
       .then((areas) => res.send(areas))
