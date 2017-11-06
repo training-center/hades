@@ -68,7 +68,7 @@ Os requisitos básicos da plataforma de mentoria, identificados previamente por 
 * cadastro de especializações (front end, back end, mobile, etc)
 * login social
 
-Sober o  painel administrativo:
+Sobre o  painel administrativo:
 
 * precisamos de algo para cadastrar as especializações e depois as pessoas poderem selecionar isso de uma lista, evitando assim a desnormalização da informação que aparece na tela
 * precisamos listar todas as pessoas cadastradas no sistema com filtros para exibir somente mentor(a), somente gente buscando mentoria, somente gente que já recebe mentoria, somente níveis iniciantes, somente nível intermediário, somente quem já é atuante
@@ -155,3 +155,11 @@ Na listagem de pessoas buscando mentores(as) devemos ter:
 Filtros de listagem:
 
 Deve ser possível listar as pessoas buscando mentoria por especialidade e nível de conhecimento atual.
+
+
+## Futuro da plataforma
+Essa seção tem como intuito documentar as discussões que tivemos sobre implementações que seriam interessantes para uma V2 da plataforma. São coisas que podem agregar valor, mas que atualmente não tem prioridade.
+
+- Métricas sobre o tempo de solicitação de mentoria e o aceite do mentor
+	- Essa ideia tem como intuito fornecer dados e métricas sobre o tempo de espera de uma solicitação de mentoria. Isso permite que os administradores tomem medidas(Ex. Convidar novos mentores para area de frontend que tem um tempo alto de espera)
+	- Mais detalhes na discussão da [issue 7](https://github.com/training-center/R2D2/issues/7)
