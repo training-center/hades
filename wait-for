@@ -13,7 +13,7 @@ echo "Mysql is up - executing command"
 ./node_modules/.bin/sequelize db:seed:all
 
 if [ "$1" = "test" ]; then
-  npm rum test
+  npm run test
   npm run test-acceptance
   shutdown -h now
 else
