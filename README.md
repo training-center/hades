@@ -6,17 +6,17 @@ Nós recomendamos a utilização do [Docker](https://www.docker.com/) para execu
 
 ### Rodando a API com Docker
 
-- Primeiramente instale o Docker em sua maquina conforme a recomendações do site.
-- Clone esse repositório na sua maquina.
+- Primeiramente instale o Docker em sua máquina conforme as recomendações do site.
+- Clone este repositório na sua máquina.
 - Entre na pasta clonada e execute:
 
 ```docker-compose up -d```
 
-Após a execução do comando o API deve estár disponível em:
+Após a execução do comando a API deve estár disponível em:
 
 ```localhost:3000```
 
-Qualquer modificação em nos arquivos `.js` do projeto deverão recaregar o node automáticamente, pois este esta sendo executado através de um `nodemon`, assim é só codar que seu servidor irá atualizar automáticamente.
+Qualquer modificação nos arquivos `.js` do projeto deverão recarregar o node automaticamente, pois este está sendo executado através de um `nodemon`, assim é só codar que seu servidor irá atualizar automaticamente.
 
 #### Outras plataformas
 
@@ -28,9 +28,9 @@ Consulte outras plataformas: [i686](i686.md).
 
 ### Rodando os testes com Docker
 
-Ha um `docker-compose` para rodar os testes da aplicação, nele irá criar um container com um banco novo para testes. Esse compose ira executar as migrations e seed no banco para testes, sequido dos testes unitários e aceitação e depois ira automáticamente desligar os containers para testes.
+Há um `docker-compose` para rodar os testes da aplicação. Nele, será criado um container com um banco novo para testes. Esse compose irá executar as migrations e seed no banco, seguido dos testes unitários e de aceitação e depois irá automaticamente desligar os containers.
 
-Para executar os testes é só executar o sequinte comando:
+Para executar os testes é só executar o seguinte comando:
 
 ```docker-compose -f docker-compose.test.yml up --abort-on-container-exit | grep "test_1"```
 
@@ -38,9 +38,9 @@ Para executar os testes é só executar o sequinte comando:
 
 A arquitetura do projeto foi pensada utilizando o [migration do Sequelize](http://sequelize.readthedocs.io/en/v3/docs/migrations/).
 
-Não há necessidade de instalar o `sequelize-cli` em sua maquina tendo em vista que este está presente dentro do container web.
+Não há necessidade de instalar o `sequelize-cli` em sua máquina, tendo em vista que este está presente dentro do container web.
 
-Caso precise executar/criar uma migration entre no container web utilizando o sequinte comando:
+Caso precise executar ou criar uma migration, entre no container web utilizando o seguinte comando:
 
 ```docker-compose exec --user 1000 web bash```
   
