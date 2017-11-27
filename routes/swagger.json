@@ -1,0 +1,49 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API da plataforma Hades",
+    "version": "1.0.0",
+    "title": "HADES - O Submundo",
+    "contact": {
+      "email": "contato@trainingcenter.io"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/training-center/hades/blob/master/LICENSE"
+    }
+  },
+  "host": "trainingcenter.io",
+  "basePath": "/api/v1",
+  "tags": [
+    {
+      "name": "area",
+      "description": "Tudo relacionado a area"
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+  },
+  "definitions": {
+    },
+    "ApiResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}

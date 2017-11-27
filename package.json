@@ -16,7 +16,8 @@
     "express-validator": "^4.3.0",
     "mysql": "^2.15.0",
     "sequelize": "^3.30.4",
-    "sequelize-cli": "^3.0.0"
+    "sequelize-cli": "^3.0.0",
+    "swagger-ui-express": "^2.0.11"
   },
   "devDependencies": {
     "chai": "4.1.2",
