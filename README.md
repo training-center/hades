@@ -26,6 +26,13 @@ Em caso de erros na composição do *Docker*, tais como:
 
 Consulte outras plataformas: [i686](i686.md).
 
+#### Problemas com Windows
+
+Caso você faça clone do repositório e após um ````docker-compose up -d``` recebeu a mensagem de `no such file or directory`, pode ser que seu problema seja com EOL de arquivos do Windows (CRLF). Para isso é bem simples de resolver, delete seu clone do repositorio e configure seu GIT para não clonar automáticamente com CRLF com sequinte comando:
+```git config --global core.autocrlf false```
+
+Após isso é só clonar novamente e repositório que deve resolver seu problema. 
+
 ### Rodando os testes com Docker
 
 Há um `docker-compose` para rodar os testes da aplicação, com ele haverá a criação de um container com um banco novo para testes. Esse compose irá executar as migrations e seed no banco para testes, seguido dos testes de unidade e de aceitação, e depois irá automaticamente desligar os containers para testes.
