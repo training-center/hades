@@ -20,7 +20,7 @@ Qualquer modificação em nos arquivos `.js` do projeto deverão recaregar o nod
 
 #### Problemas com Windows
 
-Caso você faça clone do repositório e após um ````docker-compose up -d``` recebeu a mensagem de `no such file or directory`, pode ser que seu problema seja com EOL de arquivos do Windows (CRLF). Para isso é bem simples de resolver, delete seu clone do repositorio e configure seu GIT para não clonar automáticamente com CRLF com sequinte comando:
+Caso você faça clone do repositório e após um ```docker-compose up -d``` recebeu a mensagem de `no such file or directory`, pode ser que seu problema seja com EOL de arquivos do Windows (CRLF). Para isso é bem simples de resolver, delete seu clone do repositorio e configure seu GIT para não clonar automáticamente com CRLF com sequinte comando:
 ```git config --global core.autocrlf false```
 
 Após isso é só clonar novamente e repositório que deve resolver seu problema. 
