@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 module.exports = {
 	development: {
 		username: process.env.DB_USERNAME,
@@ -7,7 +5,7 @@ module.exports = {
 		database: process.env.DB_NAME,
 		host: process.env.DB_HOSTNAME,
 		dialect: 'mysql',
-        seederStorage: 'sequelize'
+		seederStorage: 'sequelize'
 	},
 	test: {
 		username: process.env.DB_USERNAME,
@@ -15,7 +13,7 @@ module.exports = {
 		database: process.env.DB_NAME,
 		host: process.env.DB_HOSTNAME,
 		dialect: 'mysql',
-        seederStorage: 'sequelize'
+		seederStorage: 'sequelize'
 	},
 	production: {
 		username: process.env.DB_USERNAME,
@@ -23,7 +21,6 @@ module.exports = {
 		database: process.env.DB_NAME,
 		host: process.env.DB_HOSTNAME,
 		dialect: 'mysql',
-        seederStorage: 'sequelize'
+		seederStorage: 'sequelize'
 	}
 };
-
