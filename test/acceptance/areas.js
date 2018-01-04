@@ -9,43 +9,43 @@ const should = chai.should();
 chai.use(chaiHttp);
 
 describe('Route: Areas', () => {
-	it('GET areas/ - retorna lista de areas vazia', done => {
-		chai.request(server)
-			.get('/areas/')
-			.end((err, res) => {
-				res.should.have.status(200);
-				res.should.be.json;
-				res.body.should.have.keys('areas');
-				res.body.areas.should.be.an('array').that.is.empty;
+  it('GET areas/ - retorna lista de areas vazia', (done) => {
+    chai.request(server)
+      .get('/areas/')
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.be.json;
+        res.body.should.have.keys('areas');
+        res.body.areas.should.be.an('array').that.is.empty;
 
-				done();
-			});
-	});
+        done();
+      });
+  });
 
-	it('POST areas/ - deve cadastrar uma area', done => {
-		chai.request(server)
-			.post('/areas/')
-			.send({name: 'Back-End'})
-			.end((err, res) => {
-				res.should.have.status(200);
-				res.should.be.json;
-				res.body.should.include({id: 1, name: 'Back-End'});
+  it('POST areas/ - deve cadastrar uma area', (done) => {
+    chai.request(server)
+      .post('/areas/')
+      .send({ name: 'Back-End' })
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.be.json;
+        res.body.should.include({ id: 1, name: 'Back-End' });
 
-				done();
-			});
-	});
+        done();
+      });
+  });
 
-	it('PUT areas/ - deve atualizar uma area', done => {
-		chai.request(server)
-			.put('/areas/1')
-			.send({name: 'Front-End'})
-			.end((err, res) => {
-				res.should.have.status(200);
-				res.should.be.json;
-				res.body.should.have.keys('areas');
-				res.body.areas.should.be.an('array').that.deep.include({id: 1, name: 'Front-End'});
+  it('PUT areas/ - deve atualizar uma area', (done) => {
+    chai.request(server)
+      .put('/areas/1')
+      .send({ name: 'Front-End' })
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.be.json;
+        res.body.should.have.keys('areas');
+        res.body.areas.should.be.an('array').that.deep.include({ id: 1, name: 'Front-End' });
 
-				done();
-			});
-	});
+        done();
+      });
+  });
 });
