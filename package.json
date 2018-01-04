@@ -5,7 +5,8 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "test": "xo && mocha --exit 'test/unit/*.js'",
+    "lint": "eslint .",
+    "test": "npm run lint && mocha --exit 'test/unit/*.js'",
     "test-acceptance": "mocha --exit 'test/acceptance/*.js'",
     "start": "node ./bin/www",
     "start-dev": "nodemon ./bin/www"
@@ -13,23 +14,21 @@
   "dependencies": {
     "body-parser": "1.18.2",
     "express": "4.15.5",
-    "express-validator": "^4.3.0",
-    "mysql": "^2.15.0",
-    "sequelize": "^3.30.4",
-    "sequelize-cli": "^3.0.0"
+    "express-validator": "4.3.0",
+    "mysql": "2.15.0",
+    "sequelize": "3.30.4",
+    "sequelize-cli": "3.0.0"
   },
   "devDependencies": {
     "chai": "4.1.2",
     "chai-http": "3.0.0",
+    "eslint": "4.14.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.5.1",
     "mocha": "4.0.1",
-    "nodemon": "1.12.1",
-    "xo": "0.18.2"
-	},
-	"xo": {
-		"globals": ["describe", "it"],
-		"rules": {
-			"new-cap": ["error", { "capIsNew": false }],
-			"indent": "off"
-		}
-	}
+    "nodemon": "1.12.1"
+  }
 }

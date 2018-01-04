@@ -9,17 +9,17 @@ const should = chai.should();
 chai.use(chaiHttp);
 
 describe('Route: Index', () => {
-	describe('GET /', () => {
-		it('returns a Training Center message', done => {
-			chai.request(server)
+  describe('GET /', () => {
+    it('returns a Training Center message', (done) => {
+      chai.request(server)
         .get('/')
         .end((err, res) => {
-					const expected = 'Plataforma training-center';
-					res.should.have.status(200);
-					res.should.be.json;
-					res.body.msg.should.equal(expected);
-					done();
-				});
-		});
-	});
+          const expected = 'Plataforma training-center';
+          res.should.have.status(200);
+          res.should.be.json;
+          res.body.msg.should.equal(expected);
+          done();
+        });
+    });
+  });
 });
