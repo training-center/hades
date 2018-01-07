@@ -18,6 +18,14 @@ Após a execução do comando o API deve estár disponível em:
 
 Qualquer modificação em nos arquivos `.js` do projeto deverão recaregar o node automáticamente, pois este esta sendo executado através de um `nodemon`, assim é só codar que seu servidor irá atualizar automáticamente.
 
+### Swagger
+
+A API utiliza a documentação do [Swagger](https://swagger.io/).
+
+Com o projeto rodando, a documentação da API deve estár disponível em:
+
+```localhost:3000/docs```
+
 #### Outras plataformas
 
 Em caso de erros na composição do *Docker*, tais como: 
