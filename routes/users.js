@@ -1,7 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
 
-router.get('/login', function(req, res, next) {
+const router = express.Router();
+
+router.get('/login', (req, res) => {
   res.send('Logado!?');
 });
 
